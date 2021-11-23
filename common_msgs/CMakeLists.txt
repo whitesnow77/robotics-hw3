@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.8.3)
-project(topic_custom)
+make_minimum_required(VERSION 2.8.3)
+project(common_msgs)
 
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
@@ -8,15 +8,15 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
-# Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-  define_msg.msg
-)
-
+# Generate services in the 'srv' folder
 add_service_files(
   FILES
   AddTwoNum.srv
+)
+
+add_message_files(
+  FILES
+  TimePose.msg
 )
 # Generate added messages and services with any dependencies listed here
 generate_messages(
@@ -25,6 +25,5 @@ generate_messages(
   std_msgs
 )
 catkin_package(
-  CATKIN_DEPENDS geometry_msgs rospy std_msgs
+  CATKIN_DEPENDS rospy std_msgs
 )
-
