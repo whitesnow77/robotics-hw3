@@ -1,5 +1,5 @@
 <package format="2">
-<name>common_msgs</name>
+<name>sensor</name>
 <version>0.0.0</version>
 <description>The sensor package</description>
 <maintainer email="pi@todo.todo">pi</maintainer>
